@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Saturday Night';
+    src: url('saturday-night-interlock-2.woff2') format('woff2'),
+         url('saturday-night-interlock-2.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Retropix';
+    src: url('retropix.otf.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(242,242,216);
+}
+
+.nav{
+    background-color:rgb(219,26,26);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+h1 {
+    font-family: 'Saturday Night', sans-serif;
+    font-size: 3rem;
+}
+
+h2{
+    font-family: 'Retropix', sans-serif;
+    font-size: 2rem;
+}
