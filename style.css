@@ -15,6 +15,8 @@
 
 
 body{
+    min-width: 100vh;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background-color: rgb(242,242,216);
@@ -22,6 +24,7 @@ body{
 
 .nav{
     background-color:rgb(219,26,26);
+    position: relative;
     width: 100%;
     height: 40px;
     display: flex;
@@ -31,10 +34,62 @@ body{
 
 h1 {
     font-family: 'Saturday Night', sans-serif;
-    font-size: 3rem;
+    height: fit-content;
+    margin: 0;
+    margin-left: 1%;
+    margin-top: 0.25%;
 }
 
 h2{
     font-family: 'Retropix', sans-serif;
     font-size: 2rem;
+}
+
+.text {
+    border-radius: 2%;
+    width: 25%;
+    aspect-ratio: 2 / 1;
+    position: absolute;
+    bottom: 10%;
+    right: 12.5%;
+    resize: none;
+}
+
+.field{
+    border-radius: 2%;
+    margin-top: 0.25%;
+    margin-right: 0.25%;
+    justify-self: flex-end;
+    width: 50%;
+    aspect-ratio: 2 / 1;
+    background-color: lightslategray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.square{
+    margin-top: 2%;
+    align-self: start;
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    background-color: red;
+}
+
+.circle{
+    margin-top: 2%;
+    align-self: start;
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.rectangle{
+    margin-top: 2%;
+    align-self: start;
+    width: 20%;
+    aspect-ratio: 2 / 1;
+    background-color: red;
 }
