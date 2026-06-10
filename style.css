@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Saturday Night';
-    src: url('saturday-night-interlock-2.woff2') format('woff2'),
-         url('saturday-night-interlock-2.woff') format('woff');
+    src: url('font/saturday-night-interlock-2.woff2') format('woff2'),
+         url('font/saturday-night-interlock-2.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Retropix';
-    src: url('retropix.otf.woff2') format('woff2');
+    src: url('font/retropix.otf.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -62,7 +62,7 @@ h2{
     justify-self: flex-end;
     width: 50%;
     aspect-ratio: 2 / 1;
-    background-color: lightslategray;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -74,7 +74,7 @@ h2{
     align-self: start;
     width: 10%;
     aspect-ratio: 1 / 1;
-    background-color: red;
+    background-color: rgba(173,235,179);
 }
 
 .circle{
@@ -82,7 +82,7 @@ h2{
     align-self: start;
     width: 10%;
     aspect-ratio: 1 / 1;
-    background-color: red;
+    background-color: rgba(173,235,179);
     border-radius: 50%;
 }
 
@@ -91,5 +91,5 @@ h2{
     align-self: start;
     width: 20%;
     aspect-ratio: 2 / 1;
-    background-color: red;
+    background-color: rgba(173,235,179);
 }
