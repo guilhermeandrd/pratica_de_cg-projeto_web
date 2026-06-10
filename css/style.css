@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Saturday Night';
-    src: url('font/saturday-night-interlock-2.woff2') format('woff2'),
-         url('font/saturday-night-interlock-2.woff') format('woff');
+    src: url('../font/saturday-night-interlock-2.woff2') format('woff2'),
+         url('../font/saturday-night-interlock-2.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Retropix';
-    src: url('font/retropix.otf.woff2') format('woff2');
+    src: url('../font/retropix.otf.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
