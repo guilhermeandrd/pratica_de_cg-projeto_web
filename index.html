@@ -8,24 +8,30 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body onload="cargarPlano()">
     <div id="navBar">
         <h1>LOGO</h1>
     </div>
 
-    <div class="dropdown">
-        <button class="dropbtn"> Fases ▾ </button>
-        <div class="dropdown-content">
-            <a href="">Fase 1</a>
-            <a href="">Fase 2</a>
-            <a href="">Fase 3</a>
+    <div id="containerDrop">
+        <div class="dropdown">
+            <button class="dropbtn"> Fases ▾ </button>
+            <div class="dropdown-content">
+                <a href="">Fase 1</a>
+                <a href="">Fase 2</a>
+                <a href="">Fase 3</a>
+            </div>
         </div>
     </div>
     
     <div id="cartesianPlane">
-        <div class="obj" id="square"></div>
+        <div class="container">
+            <canvas id="plano" height="620" width=620></canvas>
+            <div class="container__panel-tablaVal"></div>
+        </div>
+        <!-- <div class="obj" id="square"></div>
         <div class="obj" id="circle"></div>
-        <div class="transObj" id="rectangle"></div>
+        <div class="transObj" id="rectangle"></div> -->
     </div>
 
     <div id="trys">
@@ -35,8 +41,13 @@
     </div>
     
     
-    <button type="button" id="answer"> Insira aqui a resposta... </button>
-    <!-- <textarea id="responseField"></textarea> -->
+    <button type="button" id="answerBtn"> Insira aqui a resposta... </button>
+    <div id="responseField">
+        <textarea id="response"></textarea>
+        <!-- <button type="button" id="responseBtn"> Inserir </button> -->
+    </div>
 </body>
 <script src="js/script.js"></script>
+<script src="js/plano.js"></script>
+<script src="js/desenhar.js"></script>
 </html>
