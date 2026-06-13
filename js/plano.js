@@ -74,3 +74,7 @@ function drawArrows(canvas, height, width, size, yFinal, xFinal){
         canvas.lineTo(xFinal-width, height);
         canvas.stroke();
 }
+
+function Numbers(params) {
+    
+}
