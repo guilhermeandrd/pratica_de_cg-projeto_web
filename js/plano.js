@@ -1,80 +1,76 @@
-cargarPlano();
+const plane = document.getElementById("plano");
+const backColor = "grey";
+const mainColor = "black";
+const ctx = plane.getContext("2d");
 
-var chBox = document.getElementById("chBox_PlanoDecimal");
-chBox.addEventListener("click" , cambiarFondo);
-chBox.checked = false;
+function loadPlane(){
+    plane.width = plane.offsetWidth;
+    plane.height = plane.offsetHeight;
+    const width = plane.width , height = plane.height;
+    let vLines = 30;
+    let hLines = 10;
 
-var fondoDec = false;
+    drawHLines(ctx, backColor, 3, 0, 0, width, hLines, height/hLines);
+    drawVLines(ctx, backColor, 3, 0, 0, height, vLines, width/vLines);
+    drawArrows(ctx, height/hLines, width/vLines, 10, height, width);
+}
 
-function cargarPlano()
-{
-    const ancho = plano.width , alto = plano.height;
-    const largoLinea = ancho/80;
-    lienzoP.clearRect(0, 0, ancho, alto);
-    dibujarLinea(lienzoP, "#000000", 1.2 , largoLinea, alto/2 , ancho - largoLinea, alto/2);
-    dibujarLinea(lienzoP, "#000000", 1.2 , ancho/2, largoLinea , ancho/2 , alto - largoLinea);
-    //lineas de la flechas del plano
-    dibujarLinea(lienzoP, "#000000", 1.2 , ancho/2, 0 , ancho/2 - largoLinea , largoLinea);
-    dibujarLinea(lienzoP, "#000000", 1.2 , ancho/2, 0 , ancho/2 + largoLinea , largoLinea);
-    dibujarLinea(lienzoP, "#000000", 1.2 , ancho/2 - largoLinea, largoLinea , ancho/2 + largoLinea , largoLinea);
-    dibujarLinea(lienzoP, "#000000", 1.2 , ancho/2, alto , ancho/2 - largoLinea , alto - largoLinea);
-    dibujarLinea(lienzoP, "#000000", 1.2 , ancho/2, alto , ancho/2 + largoLinea , alto - largoLinea);
-    dibujarLinea(lienzoP, "#000000", 1.2 , ancho/2 - largoLinea, alto - largoLinea, ancho/2 + largoLinea , alto - largoLinea);
-    dibujarLinea(lienzoP, "#000000", 1.2 , 0, alto/2 , largoLinea , alto/2 - largoLinea);
-    dibujarLinea(lienzoP, "#000000", 1.2 , 0, alto/2 , largoLinea , alto/2 + largoLinea);
-    dibujarLinea(lienzoP, "#000000", 1.2 , largoLinea, alto/2 - largoLinea, largoLinea , alto/2 + largoLinea);
-    dibujarLinea(lienzoP, "#000000", 1.2 , ancho, alto/2, ancho - largoLinea, alto/2 + largoLinea);
-    dibujarLinea(lienzoP, "#000000", 1.2 , ancho, alto/2, ancho - largoLinea, alto/2 - largoLinea);
-    dibujarLinea(lienzoP, "#000000", 1.2 , ancho - largoLinea, alto/2 - largoLinea, ancho - largoLinea, alto/2 + largoLinea);
-
-    lienzoP.font= "bold 15px arial"
-    //Y
-    lienzoP.fillText("Y" , ancho/2 + 2*largoLinea, 2*largoLinea );
-    //-Y
-    lienzoP.fillText("-Y" , ancho/2 + 2*largoLinea, alto - largoLinea );
-    //X
-    lienzoP.fillText("X" , ancho - 2*largoLinea, alto/2 - 2*largoLinea );
-    //-X
-    lienzoP.fillText("-X" , largoLinea, alto/2 - 2*largoLinea );
-
-    const espacio = ancho / 20;
-    var numero = 0;
-    var inicial = 0;
-    lienzoP.font = " 10px 'Times New Roman', Times, serif";
-    if(fondoDec === true)
-    {
-        numero = -2.25;
-        inicial = numero;
-        for( var i = -ancho/2 + espacio ; i < ancho; i+= espacio )
-        {
-            if(numero != 0 && numero <= -inicial)
-            {
-                dibujarLinea(lienzoP, "#000000", 0.8 , ancho/2 + i, alto/2 - 7 , ancho/2 + i, alto/2 + 7);
-                lienzoP.fillText(`${numero}` , ancho/2 + i - 4 , alto/2 + 16);
-                dibujarLinea(lienzoP, "#000000", 0.2 , ancho/2 + i, espacio , ancho/2 + i, alto - espacio);
-                dibujarLinea(lienzoP, "#000000", 0.8 , ancho/2 + 7, alto/2 + i , ancho/2 - 7, alto/2 + i);
-                lienzoP.fillText(`${-numero}` , ancho/2 - 28 , alto/2 + i + 4);
-                dibujarLinea(lienzoP, "#000000", 0.2 , espacio , alto/2 + i , ancho - espacio, alto/2 + i );
-            }
-            numero += 0.25;
-        }
+function drawVLines(canvas, color, width, xInicial, yInicial, yFinal, nLines, spacement){
+    canvas.strokeStyle = color;
+    canvas.lineWidth = width;
+    let currentX;
+    for(let index = 0; index <= nLines; index++) {
+        currentX = xInicial + ((index+1) * spacement);
+        canvas.beginPath();
+            canvas.moveTo(currentX, yInicial);
+            canvas.lineTo(currentX, yFinal);
+            canvas.stroke();    
     }
-    else
-    {
-        numero = -9;
-        inicial = numero;
-        for( var i = -ancho/2 + espacio ; i < ancho; i+= espacio )
-        {
-            if(Math.round(numero) != 0 && numero <= -inicial)
-            {
-                dibujarLinea(lienzoP, "#000000", 0.8 , ancho/2 + i, alto/2 - 7 , ancho/2 + i, alto/2 + 7);
-                lienzoP.fillText(`${Math.round(numero)}` , ancho/2 + i - 4 , alto/2 + 16);
-                dibujarLinea(lienzoP, "#000000", 0.2 , ancho/2 + i, espacio , ancho/2 + i, alto - espacio);
-                dibujarLinea(lienzoP, "#000000", 0.8 , ancho/2 + 7, alto/2 + i , ancho/2 - 7, alto/2 + i);
-                lienzoP.fillText(`${Math.round(-numero)}` , ancho/2 - 21 , alto/2 + i + 4);
-                dibujarLinea(lienzoP, "#000000", 0.2 , espacio , alto/2 + i , ancho - espacio, alto/2 + i );
-            }
-            numero ++
-        }
+}
+
+function drawHLines(canvas, color, width, xInicial, yInicial, xFinal, nLines, spacement){
+    canvas.strokeStyle = color;
+    canvas.lineWidth = width;
+    let currentY;
+    for(let index = 0; index <= nLines; index++) {
+        currentY = yInicial + (index * spacement);
+        canvas.beginPath();
+            canvas.moveTo(xInicial, currentY);
+            canvas.lineTo(xFinal, currentY);
+            canvas.stroke();
     }
+}
+
+function drawArrows(canvas, height, width, size, yFinal, xFinal){
+    //ponta da flecha pra cima
+    canvas.beginPath();
+        canvas.moveTo(width, height-2);
+        canvas.lineTo(width-size, height+size);
+        canvas.lineTo(width+size, height+size);
+        canvas.fill();
+
+    //cabo da flecha pra cima
+    canvas.beginPath();
+        canvas.strokeStyle = mainColor
+        canvas.moveTo(width, height+10);
+        canvas.lineTo(width, yFinal-height);
+        canvas.stroke();
+        
+    //mudando a posição da seta
+    width += 1020;
+    height += 290;
+
+    //seta pro lado
+    canvas.beginPath();
+        canvas.moveTo(width, height+1);
+        canvas.lineTo(width-size, height-size);
+        canvas.lineTo(width-size, height+size+1);
+        canvas.fill();
+
+    //cabo da flecha pro lado
+    canvas.beginPath();
+        canvas.strokeStyle = mainColor
+        canvas.moveTo(width-5, height);
+        canvas.lineTo(xFinal-width, height);
+        canvas.stroke();
 }

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body onload="cargarPlano()">
+<body onload="loadPlane()">
     <div id="navBar">
         <h1>LOGO</h1>
     </div>
@@ -25,13 +25,11 @@
     </div>
     
     <div id="cartesianPlane">
-        <div class="container">
-            <canvas id="plano" height="620" width=620></canvas>
-            <div class="container__panel-tablaVal"></div>
-        </div>
         <!-- <div class="obj" id="square"></div>
         <div class="obj" id="circle"></div>
         <div class="transObj" id="rectangle"></div> -->
+
+        <canvas id="plano"></canvas>
     </div>
 
     <div id="trys">
@@ -49,5 +47,4 @@
 </body>
 <script src="js/script.js"></script>
 <script src="js/plano.js"></script>
-<script src="js/desenhar.js"></script>
 </html>
