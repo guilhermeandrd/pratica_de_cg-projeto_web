@@ -1,5 +1,5 @@
-const plane = document.getElementById("plano");
-const backColor = "grey";
+const plane = document.getElementById("plane");
+const backColor = "rgba(85, 79, 79, 0.2)";
 const mainColor = "black";
 const ctx = plane.getContext("2d");
 
@@ -13,6 +13,9 @@ function loadPlane(){
     drawHLines(ctx, backColor, 3, 0, 0, width, hLines, height/hLines);
     drawVLines(ctx, backColor, 3, 0, 0, height, vLines, width/vLines);
     drawArrows(ctx, height/hLines, width/vLines, 10, height, width);
+    ctx.font = "30px dogica serif";
+    ctx.fillText(`y`, 10, 45);
+    ctx.fillText(`x`, 1046, 355);
 }
 
 function drawVLines(canvas, color, width, xInicial, yInicial, yFinal, nLines, spacement){
@@ -53,7 +56,7 @@ function drawArrows(canvas, height, width, size, yFinal, xFinal){
     canvas.beginPath();
         canvas.strokeStyle = mainColor
         canvas.moveTo(width, height+10);
-        canvas.lineTo(width, yFinal-height);
+        canvas.lineTo(width, yFinal-height+15);
         canvas.stroke();
         
     //mudando a posição da seta
@@ -62,7 +65,7 @@ function drawArrows(canvas, height, width, size, yFinal, xFinal){
 
     //seta pro lado
     canvas.beginPath();
-        canvas.moveTo(width, height+1);
+        canvas.moveTo(width+2, height+1);
         canvas.lineTo(width-size, height-size);
         canvas.lineTo(width-size, height+size+1);
         canvas.fill();
@@ -71,7 +74,7 @@ function drawArrows(canvas, height, width, size, yFinal, xFinal){
     canvas.beginPath();
         canvas.strokeStyle = mainColor
         canvas.moveTo(width-5, height);
-        canvas.lineTo(xFinal-width, height);
+        canvas.lineTo(xFinal-width-15, height);
         canvas.stroke();
 }
 
