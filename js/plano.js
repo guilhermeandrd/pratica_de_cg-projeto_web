@@ -13,9 +13,9 @@ function loadPlane(){
     drawHLines(ctx, backColor, 3, 0, 0, width, hLines, height/hLines);
     drawVLines(ctx, backColor, 3, 0, 0, height, vLines, width/vLines);
     drawArrows(ctx, height/hLines, width/vLines, 10, height, width);
-    ctx.font = "30px dogica serif";
-    ctx.fillText(`y`, 10, 45);
-    ctx.fillText(`x`, 1046, 355);
+    ctx.font = "25px dogica serif";
+    ctx.fillText(`y`, 29, 25);
+    ctx.fillText(`x`, 1060, 334);
 }
 
 function drawVLines(canvas, color, width, xInicial, yInicial, yFinal, nLines, spacement){
@@ -23,12 +23,14 @@ function drawVLines(canvas, color, width, xInicial, yInicial, yFinal, nLines, sp
     canvas.lineWidth = width;
     let currentX;
     for(let index = 0; index <= nLines; index++) {
-        currentX = xInicial + ((index+1) * spacement);
+        currentX = Math.floor(xInicial + ((index+1) * spacement)) + 0.5;
         canvas.beginPath();
             canvas.moveTo(currentX, yInicial);
             canvas.lineTo(currentX, yFinal);
             canvas.stroke();
-        canvas.fillText(index, currentX, 340)
+        if(index < 28 && index > -1){
+            Numbers(canvas, index, currentX-3, 340);
+        }
     }
 }
 
@@ -37,12 +39,14 @@ function drawHLines(canvas, color, width, xInicial, yInicial, xFinal, nLines, sp
     canvas.lineWidth = width;
     let currentY;
     for(let index = 0; index <= nLines; index++) {
-        currentY = yInicial + (index * spacement);
+        currentY = Math.floor(yInicial + ((index+1) * spacement)) + 0.5;
         canvas.beginPath();
             canvas.moveTo(xInicial, currentY);
             canvas.lineTo(xFinal, currentY);
             canvas.stroke();
-        canvas.fillText((9-index), 30, currentY)
+        if(8-index < 8 && 8-index > -1){
+            Numbers(canvas, 8-index, 25, currentY+3);
+        }
     }
 }
 
@@ -80,6 +84,10 @@ function drawArrows(canvas, height, width, size, yFinal, xFinal){
         canvas.stroke();
 }
 
-function Numbers(params) {
-    
+function Numbers(canvas, char, x, y){
+    if(char == 0){
+        canvas.fillText(char, 24.5, 340.5);
+    }else{
+        canvas.fillText(char, x, y);
+    }
 }
