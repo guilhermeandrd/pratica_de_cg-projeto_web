@@ -24,7 +24,8 @@ function drawVLines(canvas, color, width, xInicial, yInicial, yFinal, nLines, sp
         canvas.beginPath();
             canvas.moveTo(currentX, yInicial);
             canvas.lineTo(currentX, yFinal);
-            canvas.stroke();    
+            canvas.stroke();
+        canvas.fillText(index, currentX, 340)
     }
 }
 
@@ -38,6 +39,7 @@ function drawHLines(canvas, color, width, xInicial, yInicial, xFinal, nLines, sp
             canvas.moveTo(xInicial, currentY);
             canvas.lineTo(xFinal, currentY);
             canvas.stroke();
+        canvas.fillText((9-index), 30, currentY)
     }
 }
 
