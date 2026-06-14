@@ -141,6 +141,7 @@ h2{
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
+    position: relative; 
 }
 
 #answerBtn{
@@ -178,15 +179,19 @@ h2{
 }
 
 .obj{
+    z-index: 1;
     border: 3px solid;
 }
 
 .transObj{
+    z-index: 1;
     border: 2px dashed rgba(0, 0, 0, 0.4);
 }
 
 
-#plano{
+#plane{
+    position: absolute;
+    z-index: 0;
     width: 100%;
     height: 100%;
 }
