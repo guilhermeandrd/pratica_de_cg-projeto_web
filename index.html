@@ -13,39 +13,42 @@
         <h1>LOGO</h1>
     </div>
 
-    <div id="containerDrop">
-        <div class="dropdown">
-            <button class="dropbtn"> Fases ▾ </button>
-            <div class="dropdown-content">
-                <a href="">Fase 1</a>
-                <a href="">Fase 2</a>
-                <a href="">Fase 3</a>
+    <div id="levelControl">
+
+        <div id="containerDrop">
+            <div class="dropdown">
+                <button class="dropbtn"> Fases ▾ </button>
+                <div class="dropdown-content">
+                    <a href="">Fase 1</a>
+                    <a href="">Fase 2</a>
+                    <a href="">Fase 3</a>
+                </div>
             </div>
         </div>
+
+        <div id="trys">
+            <h2>
+                Tentativas:
+            </h2>
+        </div>
+
     </div>
     
     <div id="cartesianPlane">
-        <div class="obj" id="square"></div>
         <div class="obj" id="circle"></div>
-        <div class="transObj" id="rectangle"></div>
+        <div class="obj" id="rectangle"></div>
 
-        <canvas id="plane"></canvas>
-    </div>
 
-    <div id="trys">
-        <h2>
-            Tentativas:
-        </h2>
     </div>
     
 
-    <div id="responseField">
-        <textarea id="response">Insira aqui a resposta... </textarea>
-        <!-- <button type="button" id="responseBtn"> Inserir </button> -->
-    </div>
+    <div id="responseContainment">
+        <div id="responseField">
+            <textarea id="response" placeholder="Insira aqui a resposta..."></textarea>
+            <!-- <button type="button" id="responseBtn"> Inserir </button> -->
+        </div>
 
-    <div class="buttonVerify">
-        <button id="buttonVerifyInput">Verificar</button>
+        <button id="buttonVerify">Verificar</button>
     </div>
     
 </body>

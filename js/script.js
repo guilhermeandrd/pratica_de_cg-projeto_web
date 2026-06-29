@@ -14,7 +14,7 @@ responseField.addEventListener("keydown", (event) => {
     }
 })
 
-buttonVerifyInput.addEventListener("click", () => {
+buttonVerify.addEventListener("click", () => {
     if(responseField.innerText() === answerWaited){
         console.log("acertou");
     }

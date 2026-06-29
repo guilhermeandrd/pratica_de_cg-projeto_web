@@ -36,7 +36,7 @@ body{
 
 #containerDrop{
     margin-top: 2%;
-    margin-left: 10%;
+    margin-left: 2%;
     width: 12vw;
 }
 
@@ -88,10 +88,20 @@ h2{
 }
 
 #trys{
-    width: 200px    ;
+    height: 5vh;
+    width: 12vw;
     background-color: var(--usualRed);
-    margin-top: 1%;
-    margin-left: 10%;
+    border-radius: 5%;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+#trys h2{
+    margin-top: 4%;
+    margin-left: 4%;
+    width: 95%;           
+    white-space: nowrap;   
+    overflow: hidden; 
 }
 
 #navBar{
@@ -104,10 +114,22 @@ h2{
     align-items: flex-start;
 }
 
-#responseField{
+#levelControl{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#responseContainment{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     position: absolute;
     bottom: 10%;
-    align-self: center;
+    left: 5%;
+}
+
+#responseField{
+    align-self: flex-start;
     align-items: center;
     margin-bottom: 5%;
     display: flex;
@@ -124,6 +146,13 @@ h2{
     border: 10px solid var(--usualRed);
 }
 
+#buttonVerify{
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 12vw;
+    overflow: hidden;
+}
+
 #responseBtn{
     justify-self: center;
     background-color: var(--usualRed);
@@ -134,16 +163,36 @@ h2{
 
 #cartesianPlane{
     border: 1px solid black;
-    align-self: center;
-    margin-top: 1%;
-    width: 80%;
-    aspect-ratio: 3 / 1;
+    align-self: flex-end;
+    width: 35%;
+    aspect-ratio: 1;
     background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-around;
-    position: relative; 
+    display: grid;
+    grid-template-columns: repeat(20, minmax(10px, 1fr));
+    grid-template-rows: repeat(20, minmax(10px, 1fr));
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
     z-index: -1;
+  
+ --c: 20;
+  --cx: 10;
+  --cy: 10;
+  --dsize: 20;
+  --dcolor: #369;
+  --size: 100%;
+
+  background-image:
+    linear-gradient(#0000 calc(var(--cy) * 100% / var(--c) - 1px), #0008 0 calc(var(--cy) * 100% / var(--c) + 1px), transparent 0),
+    linear-gradient(to right, #0000 calc(var(--cx) * 100% / var(--c) - 1px), #0008 0 calc(var(--cx) * 100% / var(--c) + 1px), transparent 0),
+    repeating-linear-gradient(#0002 0 0.5px, #0000 0 calc(100% / var(--c) - 0.5px), #0002 0 calc(100% / var(--c))),
+    repeating-linear-gradient(to right, #0002 0 0.5px, #0000 0 calc(100% / var(--c) - 0.5px), #0002 0 calc(100% / var(--c)));
+    
+
+  background-position: center;
 }
+
+
 
 #answerBtn{
     align-self: center;
@@ -155,28 +204,23 @@ h2{
 }
 
 #square{
-    margin-top: 2%;
-    align-self: start;
-    width: 10%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1;
     background-color: var(--objColor);
 }
 
 #circle{
-    margin-top: 2%;
-    align-self: start;
-    width: 10%;
-    aspect-ratio: 1 / 1;
+    grid-column: 8 / 11;
+    grid-row: 8 / 11;
     background-color: var(--objColor);
     border-radius: 50%;
 }
 
 #rectangle{
-    margin-top: 2%;
-    align-self: start;
-    width: 20%;
+    grid-column: 8;
+    grid-row: 6;
     aspect-ratio: 2 / 1;
     background-color: var(--objTransColor);
+    transform: matrix(2, 0, 0, 2, 0, 0);
 }
 
 .obj{
@@ -189,15 +233,3 @@ h2{
     border: 2px dashed rgba(0, 0, 0, 0.4);
 }
 
-#plane{
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-}
-
-.buttonVerify{
-    position: absolute;
-    top: 550px;
-    right: 150px;
-}
