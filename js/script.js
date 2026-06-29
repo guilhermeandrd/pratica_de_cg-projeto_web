@@ -2,7 +2,6 @@ const responseField = document.getElementById('responseField');
 const buttonVerify = document.getElementById('buttonVerify');
 const answerWaited = "";
 
-
 // fazer isso aqui ser de classes 
 responseField.addEventListener("click", function (){
     event.stopPropagation();
@@ -16,7 +15,6 @@ document.addEventListener("click", function(){
         responseField.style.height = "70px";
     }
 })
-
 
 buttonVerify.addEventListener("click", () => {
     if(responseField.innerText() === answerWaited){

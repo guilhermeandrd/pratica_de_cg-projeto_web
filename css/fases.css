@@ -95,7 +95,7 @@ h2{
     background-color: var(--usualRed);
     border-radius: 5%;
     margin-top: 2%;
-    margin-left: 2%;
+    margin-left: 2%;    
 }
 
 #trys h2{
@@ -146,6 +146,7 @@ h2{
     aspect-ratio: 1 / 1;
     resize: none;
     border: 10px solid var(--usualRed);
+    line-height: 1.6;
 }
 
 #buttonVerify{
@@ -153,6 +154,26 @@ h2{
     margin-left: 2%;
     width: 12vw;
     overflow: hidden;
+    background-color: var(--usualRed);
+    border-radius: 5px;
+    border: solid 2px black;
+    color: var(--backGround);
+    height: 50px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 3px 3px 0px rgb(0, 0, 0);
+}
+
+#buttonVerify:hover{
+    background-color: rgb(151, 12, 12);;
+    border-radius: 5px;
+    border: solid 2px black;
+    color: var(--backGround);
+    height: 50px;
+    width: 12vw;
+    cursor: pointer;
+    box-shadow: none;
+    transform: translate(3px, 3px);
 }
 
 #responseBtn{
@@ -177,21 +198,21 @@ h2{
     bottom: 15%;
     z-index: -1;
   
- --c: 20;
-  --cx: 10;
-  --cy: 10;
-  --dsize: 20;
-  --dcolor: #369;
-  --size: 100%;
+    --c: 20;
+    --cx: 10;
+    --cy: 10;
+    --dsize: 20;
+    --dcolor: #369;
+    --size: 100%;
 
-  background-image:
-    linear-gradient(#0000 calc(var(--cy) * 100% / var(--c) - 1px), #0008 0 calc(var(--cy) * 100% / var(--c) + 1px), transparent 0),
-    linear-gradient(to right, #0000 calc(var(--cx) * 100% / var(--c) - 1px), #0008 0 calc(var(--cx) * 100% / var(--c) + 1px), transparent 0),
-    repeating-linear-gradient(#0002 0 0.5px, #0000 0 calc(100% / var(--c) - 0.5px), #0002 0 calc(100% / var(--c))),
-    repeating-linear-gradient(to right, #0002 0 0.5px, #0000 0 calc(100% / var(--c) - 0.5px), #0002 0 calc(100% / var(--c)));
-    
+    background-image:
+        linear-gradient(#0000 calc(var(--cy) * 100% / var(--c) - 1px), #0008 0 calc(var(--cy) * 100% / var(--c) + 1px), transparent 0),
+        linear-gradient(to right, #0000 calc(var(--cx) * 100% / var(--c) - 1px), #0008 0 calc(var(--cx) * 100% / var(--c) + 1px), transparent 0),
+        repeating-linear-gradient(#0002 0 0.5px, #0000 0 calc(100% / var(--c) - 0.5px), #0002 0 calc(100% / var(--c))),
+        repeating-linear-gradient(to right, #0002 0 0.5px, #0000 0 calc(100% / var(--c) - 0.5px), #0002 0 calc(100% / var(--c)));
+        
 
-  background-position: center;
+    background-position: center;
 }
 
 
@@ -210,28 +231,22 @@ h2{
     background-color: var(--objColor);
 }
 
-#circle{
-    grid-column: 8 / 11;
-    grid-row: 8 / 11;
-    background-color: var(--objColor);
-    border-radius: 50%;
-}
-
 #rectangle{
     grid-column: 8;
     grid-row: 6;
     aspect-ratio: 2 / 1;
-    background-color: var(--objTransColor);
-    transform: matrix(2, 0, 0, 2, 0, 0);
+    transform: matrix(4, 0, 0, 4, 0, 0);
 }
 
 .obj{
-    z-index: 0;
-    border: 3px solid;
+    z-index: 1;
+    border: 1px solid;
+    background-color: var(--objColor);
 }
 
 .transObj{
     z-index: 0;
-    border: 2px dashed rgba(0, 0, 0, 0.4);
+    border: 1px dashed rgba(0, 0, 0, 0.4);
+    background-color: var(--objTransColor);
 }
 
