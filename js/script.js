@@ -17,13 +17,6 @@ document.addEventListener("click", function(){
 })
 
 
-/*responseField.addEventListener("keydown", (event) => {
-    if(event.key === "Enter"){
-        responseField.style.width = "200px";
-        responseField.style.height = "70px";
-    }
-})*/
-
 buttonVerify.addEventListener("click", () => {
     if(responseField.innerText() === answerWaited){
         console.log("acertou");
