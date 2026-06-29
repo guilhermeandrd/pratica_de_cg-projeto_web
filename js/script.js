@@ -3,6 +3,7 @@ const buttonVerify = document.getElementById('buttonVerify');
 const answerWaited = "";
 
 
+// fazer isso aqui ser de classes 
 responseField.addEventListener("click", function (){
     event.stopPropagation();
     responseField.style.width = "400px";
