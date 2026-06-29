@@ -116,6 +116,15 @@ h2{
     align-items: flex-start;
 }
 
+#textContainer {
+    width: 40%;
+    aspect-ratio: 3 / 2;
+    align-self: flex-start;
+    margin-top: 1%;
+    margin-left: 2%;
+    overflow: auto;
+}
+
 #levelControl{
     display: flex;
     justify-content: flex-start;

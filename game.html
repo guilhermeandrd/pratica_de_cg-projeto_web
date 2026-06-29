@@ -33,6 +33,47 @@
         </div>
 
     </div>
+
+    <div id="textContainer">
+    <p>
+        Dada uma figura geométrica em um plano cartesiano, podemos definir cada uma de suas extremidades, seus vértices, como vetores de
+        dimensões iguais as dimensões do plano, no caso de figuras 2D que serão abordadas nos exercícios a seguir, esses vetores terão duas dimensões,
+        referentes respectivamente as dimensões x e y do plano cartesiano.
+        Sabendo da representação das figuras geométricas por meio dos vetores de seus vértices, é possível definir transformações geométricas de
+        rotação, escala, cisalinhamento e translação, por meio de matrizes, dado que essas serão as transformações trabalhadas a seguir, para as respostas
+        trabalharemos com matrizes de coordenadas homogêneas, ou seja, apesar de trabalharmos em duas dimensões, utilizaremos uma terceira dimensão constante
+        para que todas nossas transformações possam ser compostas sem conflitos de tamanho da matriz, o padrão de uma matriz homogênea para duas dimensões é <br>
+        (1, 0, 0) <br>
+        (0, 1, 0) <br>
+        (0, 0, 1) <br>
+        Essa é a matriz identidade com a qual iremos trabalhar, a primeira linha é referente as coordenadas x, a segunda linha é referente as coordenadas y
+        e a terceira linha é a linha acrescentada para trabalharmos com coordenadas homogêneas.  
+
+        Para iniciarmos com uma transformação simples, tente tranformar o quadrado ilustrado em um retângulo em que o sua largura é o triplo de sua altura por meio de uma
+        tranformação de escala, saiba que uma transformação de escala com coordernadas homogêneas segue a seguinte matriz: <br>
+        (sx, 0, 0) <br>
+        (0, sy, 0) <br>
+        (0, 0, 1) <br>
+        Sendo sx o fator da escala aplicada a x e sy o fator de escala aplicado a y. <br>
+
+        Agora, com base no retângulo alcançado no exercício anterior vamos rotacionar esse retângulo de maneira que ele se torne um retângulo com altura igual ao
+        triplo de sua largura, saiba que para uma rotação a matriz utilizada é: <br>
+        (cosO, sinO, 0) <br>
+        (-sinO, cosO, 0) <br>
+        (0, 0, 1) <br>
+        Sendo O os graus da rotação que se deseja realizar. <br>
+
+        Por fim, com os conhecimentos dos exercícios anteriores, transforme o quadrado ilustrado no retângulo translúcido ilustrado, para isso será necessário
+        usar não só as transformações de escala e rotação, mas também uma translação, saiba que a matriz utilizada para uma translação é: <br>
+        (1, 0, tx) <br>
+        (0, 1, ty) <br>
+        (0, 0, 1) <br>
+        tx se refere ao quanto o vértice será deslocado, ou seja transladado, em x e ty se refere ao quanto o vértice será deslocado, ou seja transladado, em y.
+        Por fim saiba que para encontrar a matriz composta das transformações apresentadas só é necessário multiplicar as matrizes de trnasformação da esquerda para a direita
+        de acordo com a ordem das transformações realizadas.
+
+    </p>
+    </div>
     
     <div id="cartesianPlane">
         <div class="obj" id="circle"></div>
