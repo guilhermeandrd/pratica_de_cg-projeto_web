@@ -61,7 +61,7 @@ body{
 /* --- ESTILOS DA NOVA NAVBAR --- */
 #navBar{
     background-color: var(--usualRed);
-    position: absolute; /* Fixa no topo sem atrapalhar o layout centralizado do body */
+    position: fixed; /* Fixa no topo sem atrapalhar o layout centralizado do body */
     top: 0;
     left: 0;
     width: 100%;

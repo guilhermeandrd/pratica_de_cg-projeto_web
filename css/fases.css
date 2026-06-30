@@ -29,6 +29,7 @@ body{
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    padding-top: 50px;
     background-color: var(--backGround);
     display: flex;
     flex-direction: column;
@@ -119,7 +120,7 @@ h2{
 /* --- ESTILOS DA NOVA NAVBAR --- */
 #navBar{
     background-color: var(--usualRed);
-    position: absolute; /* Fixa no topo sem atrapalhar o layout centralizado do body */
+    position: fixed; /* Fixa no topo sem atrapalhar o layout centralizado do body */
     top: 0;
     left: 0;
     width: 100%;
@@ -221,6 +222,7 @@ h2{
 }
 
 #levelControl{
+    position: relative;
     display: flex;
     justify-content: flex-start;
 }
