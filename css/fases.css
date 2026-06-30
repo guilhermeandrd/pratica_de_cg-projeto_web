@@ -53,18 +53,27 @@ body{
     height: 5vh;
     width: 12vw;
     text-align:left;
+    cursor: pointer;
 }
 
 .dropdown-content{
     display: none;
     position: absolute;
-    margin-left: 10%;
+    flex-direction: column;
 }
 
 .dropdown-content a{
     display: block;
     text-decoration: none;
-    margin-top: 10%;
+    color: white;
+    border: solid rgb(179, 21, 21);
+    background-color: var(--usualRed);
+    border-radius: 5px;
+    height: 5vh;
+    width: 11.5vw;
+    margin-top: 1%;
+    line-height: 5vh;
+    font-size: small;
 }
 
 .dropdown-content a:hover{
@@ -154,7 +163,8 @@ h2{
     width: 120%;
     aspect-ratio: 1 / 1;
     resize: none;
-    border: 10px solid var(--usualRed);
+    border: 6px solid var(--usualRed);
+    border-radius: 5px;
     line-height: 1.6;
 }
 
@@ -220,7 +230,6 @@ h2{
         repeating-linear-gradient(#0002 0 0.5px, #0000 0 calc(100% / var(--c) - 0.5px), #0002 0 calc(100% / var(--c))),
         repeating-linear-gradient(to right, #0002 0 0.5px, #0000 0 calc(100% / var(--c) - 0.5px), #0002 0 calc(100% / var(--c)));
         
-
     background-position: center;
 }
 
