@@ -18,16 +18,16 @@ let numeroTentativas = 0;
 
 const niveis = {
     1: {
-        alvoCSS: "translate(150%, 100%)",
-        respostaCorreta: "translate(150%, 100%)"
+        alvoCSS: "translate(150%,100%)",
+        respostaCorreta: "translate(150%,100%)"
     },
     2: {
-        alvoCSS: "scale(2, 0.5)",
-        respostaCorreta: "scale(2, 0.5)"
+        alvoCSS: "scale(2,0.5)",
+        respostaCorreta: "scale(2,0.5)"
     },
     3: {
-        alvoCSS: "translate(100%, 0px) rotate(45deg)",
-        respostaCorreta: "translate(100%, 0px) rotate(45deg)"
+        alvoCSS: "translate(100%,0px)rotate(45deg)",
+        respostaCorreta: "translate(100%,0px)rotate(45deg)"
     }
 };
 
@@ -114,7 +114,7 @@ if (buttonVerify) {
         numeroTentativas++;
         atualizarTentativas();
 
-        const respostaJogador = responseInput.value.trim();
+        const respostaJogador = responseInput.value.trim().toLowerCase().replaceAll(" ","").replaceAll("\r\n", "").replaceAll("\n","");
         const config = niveis[faseAtual];
         
         if(respostaJogador === config.respostaCorreta){
