@@ -30,14 +30,11 @@
     margin-bottom: 50px;
     font-family: 'Saturday Night', sans-serif; 
     
-    /* O SEGREDO DO TAMANHO GIGANTE */
-    font-size: 6rem; /* Pode aumentar para 8rem se quiser ainda maior! */
+    font-size: 6rem; 
     text-align: center;
     
-    /* Efeito de sombra dura (estilo Pixel Art / Retro) */
     text-shadow: 6px 6px 0px rgb(231, 174, 174); 
     
-    /* Uma pequena animação de flutuação (opcional, mas fica incrível) */
     animation: flutuar 3s ease-in-out infinite;
 }
 
@@ -61,14 +58,90 @@ body{
 }
 
 
+/* --- ESTILOS DA NOVA NAVBAR --- */
 #navBar{
     background-color: var(--usualRed);
-    position: relative;
+    position: absolute; /* Fixa no topo sem atrapalhar o layout centralizado do body */
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 40px;
+    height: 50px;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between; /* Links à direita, Título à esquerda */
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+#navBar h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--backGround);
+}
+
+#navLinks {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+#navLinks a {
+    color: var(--backGround);
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+#navLinks a:hover {
+    transform: translateY(-2px);
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+/* --- MENU SANDUÍCHE (Responsivo) --- */
+#hamburgerBtn {
+    display: none; /* Escondido no PC */
+    background: none;
+    border: 2px solid var(--backGround);
+    border-radius: 4px;
+    font-size: 1.2rem;
+    color: var(--backGround);
+    cursor: pointer;
+    padding: 2px 8px;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+    transition: transform 0.1s ease;
+}
+
+#hamburgerBtn:hover {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 768px) {
+    #hamburgerBtn {
+        display: block;
+    }
+
+    #navLinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: var(--usualRed);
+        padding: 20px;
+        border-bottom-left-radius: 10px;
+        border: 4px solid black;
+        border-top: none;
+        border-right: none;
+        box-shadow: -6px 6px 0px rgba(0, 0, 0, 1);
+        z-index: 1001;
+        gap: 20px;
+    }
+
+    #navLinks.active {
+        display: flex;
+    }
 }
 
 h4 {
