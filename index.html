@@ -8,12 +8,18 @@
 </head>
 <body>
 
-    <div id="navBar">
-        <h1></h1>
+    <div id="navBar">        
+        <button id="hamburgerBtn" aria-label="Abrir menu">☰</button>
+        
+        <div id="navLinks">
+            <a href="https://ko-fi.com/moveonapoie" target="_blank" title="Apoie o projeto">Doe um café ☕</a>
+            <a href="#" id="helpBtn" title="Como jogar?">Ajuda ❓</a>
+            <a href="https://github.com/guilhermeandrd/pratica_de_cg-projeto_web" target="_blank" title="Veja o código fonte">GitHub 👾</a>
+        </div>
     </div>
-
+    
     <div class="title">
-        <h2 id="logo">MOVE-ON</h2>
+        <h2 id="logo">mOvE-On</h2>
     </div>
     
     <div class="container">
@@ -24,6 +30,18 @@
           </a>
         </div>
     </div>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        if (hamburgerBtn && navLinks) {
+            hamburgerBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+    </script>
+
 
 </body>
 </html>
