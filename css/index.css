@@ -24,6 +24,30 @@
     font-family: 'dogica', sans-serif;
 }
 
+#logo {
+    color: var(--usualRed); 
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-family: 'Saturday Night', sans-serif; 
+    
+    /* O SEGREDO DO TAMANHO GIGANTE */
+    font-size: 6rem; /* Pode aumentar para 8rem se quiser ainda maior! */
+    text-align: center;
+    
+    /* Efeito de sombra dura (estilo Pixel Art / Retro) */
+    text-shadow: 6px 6px 0px rgb(231, 174, 174); 
+    
+    /* Uma pequena animação de flutuação (opcional, mas fica incrível) */
+    animation: flutuar 3s ease-in-out infinite;
+}
+
+/* Animação para o logo "respirar" no ecrã inicial */
+@keyframes flutuar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
 body{
     min-width: 100vw;
     min-height: 100vh;
@@ -53,6 +77,7 @@ h4 {
     font-size: 12px;
     color: var(--usualRed);
     margin-bottom: 30px;
+    font-family: 'dogica', sans-serif;
 }
 
 .container{
@@ -63,6 +88,8 @@ h4 {
     margin: auto;
     max-width: 90%;
     flex-direction: column;
+    font-family: 'dogica', sans-serif;
+
 }
 
 #start{
@@ -75,6 +102,8 @@ h4 {
     cursor: pointer;
     margin-top: 10px;
     box-shadow: 3px 3px 0px rgb(0, 0, 0);
+    font-family: 'dogica', sans-serif;
+
 }
 
 #start:hover{

@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="../css/fases.css">
 
 </head>
-<body onload="loadPlane()">
+<body >
     <div id="navBar">
         <h1>Move-on</h1>
     </div>
 
     <div id="levelControl">
-
         <div id="containerDrop">
             <div class="dropdown">
                 <button class="dropbtn"> Fases ▾ </button>
@@ -37,19 +36,25 @@
     <div id="cartesianPlane">
         <div class="rectangle" id="obj"></div>
         <div class="rectangle" id="transObj"></div>
-
-
     </div>
     
 
     <div id="responseContainment">
         <div id="responseField">
             <textarea id="response" placeholder="Insira aqui a resposta..."></textarea>
-            <!-- <button type="button" id="responseBtn"> Inserir </button> -->
         </div>
 
         <button id="buttonVerify">Verificar</button>
     </div>
-    <script src="js/script.js"></script>
+
+    <div id="customModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2 id="modalTitle">Título</h2>
+            <p id="modalMessage">Mensagem do modal</p>
+            <button id="modalBtn">Continuar</button>
+        </div>
+    </div>
+    
+    <script src="../js/script.js"></script>
 </body>
 </html>
