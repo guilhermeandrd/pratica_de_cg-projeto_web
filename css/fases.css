@@ -60,6 +60,7 @@ body{
     display: none;
     position: absolute;
     flex-direction: column;
+    Tentativas: 0;
 }
 
 .dropdown-content a{
@@ -264,19 +265,16 @@ h2{
 }
 
 #obj {
-    z-index: 2; /* Fica por cima */
+    z-index: 2;
     border: 3px solid;
     background-color: var(--objColor);
 }
 
 #transObj {
-    z-index: 1; /* Fica por baixo */
+    z-index: 1; 
     border: 3px dashed rgba(0, 0, 0, 0.6);
     background-color: var(--objTransColor);
-    
-    /* Posição alvo para a Fase 1 (Exemplo) */
-    /* Ao usar %, o movimento é relativo ao tamanho do próprio objeto.
-       100% = move exatamente 2 células do grid. */
+
     transform: translate(150%, 100%); 
 }
 
