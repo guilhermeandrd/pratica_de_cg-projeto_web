@@ -152,16 +152,33 @@ h4 {
     font-family: 'dogica', sans-serif;
 }
 
-.container{
-    align-items: center;
-    display: flex;
-    align-self: center;
-    justify-self: center;
-    margin: auto;
-    max-width: 90%;
-    flex-direction: column;
-    font-family: 'dogica', sans-serif;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
 
+.command-section {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--usualRed);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+code {
+    background: #eee;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--usualRed);
+    font-weight: bold;
+}
+
+h3 {
+    color: var(--usualRed);
+    margin-top: 0;
 }
 
 #start{

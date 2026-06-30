@@ -21,34 +21,42 @@
     </div>
     
     <div class="container">
-        <h4>Há três comandos básicos:
-            rotate, translate e scale.
-            <br>
-            Translate move o objeto de local conforme as coordenadas de parâmetro.
-            <br>
-            Exemplo:
-            <br>
-            translate(150%, 100%). 
-            <br>Irá mover o objeto 150% no eixo x e 100% no eixo y. Sendo esse 150% o tamanho dele mesmo.
-            Ou seja, ele irá se mover uma vez ele mais a sua metade em relação a x e uma vez ele em relação a y. 
-        </h4>
+        <h1>Como Jogar: Comandos Básicos</h1>
+        <p>Para manipular os objetos no cenário, você utilizará três funções principais. Entenda como cada uma funciona:</p>
+
+        <div class="command-section">
+            <h3>1. Translate (Translação)</h3>
+            <p>Move o objeto de local conforme as coordenadas fornecidas.</p>
+            <p><strong>Exemplo:</strong> <code>translate(150%, 100%)</code></p>
+            <ul>
+                <li><strong>Eixo X (150%):</strong> Move o objeto uma vez e meia o seu próprio tamanho para a direita.</li>
+                <li><strong>Eixo Y (100%):</strong> Move o objeto uma vez o seu próprio tamanho para baixo.</li>
+            </ul>
+        </div>
+
+        <div class="command-section">
+            <h3>2. Rotate (Rotação)</h3>
+            <p>Gira o objeto em torno do seu ponto central.</p>
+            <p><strong>Exemplo:</strong> <code>rotate(45deg)</code></p>
+            <p>Gira o objeto em 45 graus no sentido horário.</p>
+        </div>
+
+        <div class="command-section">
+            <h3>3. Scale (Escala)</h3>
+            <p>Altera o tamanho do objeto (aumenta ou diminui).</p>
+            <p><strong>Exemplo:</strong> <code>scale(2, 0.5)</code></p>
+            <ul>
+                <li><strong>X (2):</strong> Dobra a largura do objeto.</li>
+                <li><strong>Y (0.5):</strong> Reduz a altura do objeto pela metade.</li>
+            </ul>
+        </div>
+
         <div class="buttonStart">
-          <a href="fase.html">
-            <button id="start">Vamos!</button>
-          </a>
+            <a href="fase.html">
+                <button id="start">Vamos!</button>
+            </a>
         </div>
     </div>
-
-    <script>
-        const hamburgerBtn = document.getElementById('hamburgerBtn');
-        const navLinks = document.getElementById('navLinks');
-
-        if (hamburgerBtn && navLinks) {
-            hamburgerBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        }
-    </script>
 
 
 </body>
